@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>.Jordan | Jordan Molina Portfolio</title>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            background: '#051923',
+            accent: '#4fbeff',
+            highlight: '#003554',
+          },
+          fontFamily: {
+            poppins: ['Poppins', 'Inter', 'Open Sans', 'sans-serif'],
+          },
+        },
+      },
+    }
+  </script>
+  <!-- Animate.css for entrance/scroll effects -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <!-- Google Fonts: Poppins -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- Add Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <style>
+    body { font-family: 'Poppins', 'Inter', 'Open Sans', sans-serif; }
+    .glass {
+      background: rgba(20, 40, 60, 0.5);
+      backdrop-filter: blur(16px) saturate(180%);
+      -webkit-backdrop-filter: blur(16px) saturate(180%);
+      border-radius: 1.5rem;
+      border: 1px solid rgba(79, 190, 255, 0.15);
+    }
+    .glow {
+      box-shadow: 0 0 24px 4px #4fbeff44;
+    }
+    /* Slow spin for background accent */
+    .animate-spin-slow {
+      animation: spin 18s linear infinite;
+    }
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+  </style>
+</head>
+<body class="bg-background text-white min-h-screen flex flex-col">
+  <!-- Animated/Blurred Background Shapes -->
+  <div class="fixed inset-0 -z-20 pointer-events-none">
+    <div class="absolute top-0 left-0 w-80 h-80 bg-accent opacity-20 rounded-full blur-3xl animate-pulse"></div>
+    <div class="absolute bottom-0 right-0 w-96 h-96 bg-highlight opacity-30 rounded-full blur-2xl animate-pulse"></div>
+    <div class="absolute top-1/2 left-1/2 w-72 h-72 bg-accent opacity-10 rounded-full blur-2xl animate-spin-slow"></div>
+  </div>
+  <!-- Hero / Header Section -->
+  <section class="relative flex flex-col items-center justify-center min-h-[60vh] py-16 px-6 animate__animated animate__fadeInDown">
+    <div class="absolute inset-0 -z-10 bg-gradient-to-br from-accent/5 via-highlight/5 to-background animate-pulse"></div>
+    <div class="glass glow p-2 rounded-full mb-3 transition-transform duration-300 hover:scale-105">
+        <img src="assets/Jordan.jpg" alt="Jordan Molina" class="w-40 h-40 object-cover rounded-full border-4 border-accent shadow-xl" />
+      </div>
+    <h1 class="text-4xl md:text-6xl font-bold tracking-wider bg-gradient-to-r from-accent via-white to-accent bg-clip-text text-transparent drop-shadow-lg mb-4">.Jordan</h1>
+    <p class="text-accent text-xl md:text-2xl font-semibold mb-6 animate__animated animate__fadeIn animate__delay-1s">Web & Systems Developer</p>
+  </section>
+
+  <!-- About / Technical Profile -->
+  <section class="max-w-3xl mx-auto py-10 px-6 animate__animated animate__fadeInUp animate__delay-2s">
+    <div class="glass p-8 md:p-10 shadow-lg">
+      <h2 class="text-2xl font-bold text-accent mb-4">Technical Profile</h2>
+      <p class="text-lg text-white/90">
+        Web and systems developer with hands-on experience in PHP, MySQL, WordPress, and modern frontend tools. Skilled in building and maintaining dynamic websites, admin dashboards, and backend workflows. Experienced with content systems, SEO-driven marketing, and AI-assisted tool development. Fast learner with a strong problem-solving mindset, currently building projects with Laravel and React to deepen full-stack capabilities.
+      </p>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section class="max-w-5xl mx-auto py-16 px-6 animate__animated animate__fadeInUp animate__delay-3s">
+    <h2 class="text-3xl font-bold text-center text-accent mb-10 tracking-wide drop-shadow-lg">Skills</h2>
+    <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+      <div class="glass p-8 shadow-2xl hover:scale-105 transition-transform flex flex-col items-center text-center">
+        <div class="text-4xl mb-3 text-accent"><i class="fa-solid fa-code"></i></div>
+        <h3 class="text-accent font-semibold mb-3 text-lg">Languages & Frameworks</h3>
+        <ul class="space-y-2 text-white/90 text-base">
+          <li><i class="fa-brands fa-html5 text-orange-400 mr-2"></i>HTML</li>
+          <li>CSS, SASS</li>
+          <li>Tailwind CSS</li>
+          <li><i class="fa-brands fa-js text-yellow-300 mr-2"></i>JavaScript</li>
+          <li><i class="fa-brands fa-php text-indigo-300 mr-2"></i>PHP</li>
+          <li><i class="fa-brands fa-laravel text-red-400 mr-2"></i>Laravel (learning)</li>
+          <li><i class="fa-brands fa-react text-cyan-300 mr-2"></i>React (intermediate)</li>
+          <li><i class="fa-solid fa-terminal text-gray-300 mr-2"></i>Bash</li>
+        </ul>
+      </div>
+      <div class="glass p-8 shadow-2xl hover:scale-105 transition-transform flex flex-col items-center text-center">
+        <div class="text-4xl mb-3 text-accent"><i class="fa-solid fa-database"></i></div>
+        <h3 class="text-accent font-semibold mb-3 text-lg">Backend & Databases</h3>
+        <ul class="space-y-2 text-white/90 text-base">
+          <li><i class="fa-solid fa-database text-green-300 mr-2"></i>MySQL, MongoDB</li>
+          <li><i class="fa-solid fa-plug text-accent mr-2"></i>REST APIs, JSON</li>
+          <li><i class="fa-brands fa-node-js text-green-400 mr-2"></i>Express.js (basic)</li>
+        </ul>
+      </div>
+      <div class="glass p-8 shadow-2xl hover:scale-105 transition-transform flex flex-col items-center text-center">
+        <div class="text-4xl mb-3 text-accent"><i class="fa-solid fa-toolbox"></i></div>
+        <h3 class="text-accent font-semibold mb-3 text-lg">CMS & Tools</h3>
+        <ul class="space-y-2 text-white/90 text-base">
+          <li><i class="fa-brands fa-wordpress text-blue-200 mr-2"></i>WordPress (Elementor)</li>
+          <li><i class="fa-brands fa-google text-yellow-200 mr-2"></i>Google Analytics</li>
+          <li><i class="fa-brands fa-git-alt text-orange-300 mr-2"></i>Git, GitHub</li>
+          <li><i class="fa-solid fa-code-branch text-accent mr-2"></i>Replit</li>
+          <li><i class="fa-solid fa-file-lines text-gray-200 mr-2"></i>Markdown</li>
+          <li><i class="fa-solid fa-paintbrush text-pink-200 mr-2"></i>Canva</li>
+        </ul>
+      </div>
+      <div class="glass p-8 shadow-2xl hover:scale-105 transition-transform flex flex-col items-center text-center">
+        <div class="text-4xl mb-3 text-accent"><i class="fa-solid fa-lightbulb"></i></div>
+        <h3 class="text-accent font-semibold mb-3 text-lg">Content & Strategy</h3>
+        <ul class="space-y-2 text-white/90 text-base">
+          <li><i class="fa-solid fa-magnifying-glass-chart text-accent mr-2"></i>SEO</li>
+          <li><i class="fa-brands fa-instagram text-pink-400 mr-2"></i>Instagram Content Creation</li>
+          <li><i class="fa-solid fa-vial text-green-200 mr-2"></i>A/B Testing</li>
+          <li><i class="fa-solid fa-robot text-accent mr-2"></i>Prompt Engineering (AI Tools)</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <!-- Projects Gallery -->
+  <section class="max-w-5xl mx-auto py-16 px-6 animate__animated animate__fadeInUp animate__delay-3s">
+    <h2 class="text-3xl font-bold text-center text-accent mb-10 tracking-wide drop-shadow-lg">Projects</h2>
+    <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+      <!-- Diecast Diary -->
+      <button onclick="openModal('diecast')" class="group glass p-0 shadow-2xl rounded-2xl overflow-hidden hover:scale-105 transition-transform relative focus:outline-none">
+        <img src="assets/logo/diecastdiary.png" alt="Diecast Diary" class="w-full h-48 object-cover" />
+        <div class="p-6">
+          <h3 class="text-accent font-semibold text-lg mb-2">Diecast Diary</h3>
+          <p class="text-white/80 text-sm">A collector's log and showcase for diecast models. Features gallery, wishlists, and brand highlights.</p>
+        </div>
+      </button>
+      <!-- Slivalry -->
+      <button onclick="openModal('slivalry')" class="group glass p-0 shadow-2xl rounded-2xl overflow-hidden hover:scale-105 transition-transform relative focus:outline-none">
+        <img src="assets/logo/Slivalry.png" alt="Slivalry" class="w-full h-48 object-cover" />
+        <div class="p-6">
+          <h3 class="text-accent font-semibold text-lg mb-2">Slivalry</h3>
+          <p class="text-white/80 text-sm">A logo and web presence for Slivalry, a creative project with a focus on unique visual identity.</p>
+        </div>
+      </button>
+      <!-- Jordan Logo -->
+      <button onclick="openModal('jordanlogo')" class="group glass p-0 shadow-2xl rounded-2xl overflow-hidden hover:scale-105 transition-transform relative focus:outline-none">
+        <img src="assets/logo/JLogo.png" alt="Jordan Logo" class="w-full h-48 object-cover" />
+        <div class="p-6">
+          <h3 class="text-accent font-semibold text-lg mb-2">Jordan Logo</h3>
+          <p class="text-white/80 text-sm">Personal logo design for Jordan Molina, used across digital platforms and print.</p>
+        </div>
+      </button>
+      <!-- EcoKitchen -->
+      <button onclick="openModal('eco')" class="group glass p-0 shadow-2xl rounded-2xl overflow-hidden hover:scale-105 transition-transform relative focus:outline-none">
+        <img src="assets/ecokitchen/ecokitchen (1).png" alt="EcoKitchen" class="w-full h-48 object-cover" />
+        <div class="p-6">
+          <h3 class="text-accent font-semibold text-lg mb-2">EcoKitchen</h3>
+          <p class="text-white/80 text-sm">A web project for EcoKitchen, focused on sustainable kitchen solutions and eco-friendly products.</p>
+        </div>
+      </button>
+      <!-- KiddoTech -->
+      <button onclick="openModal('kiddo')" class="group glass p-0 shadow-2xl rounded-2xl overflow-hidden hover:scale-105 transition-transform relative focus:outline-none">
+        <img src="assets/kiddotech/kiddotech (1).png" alt="KiddoTech" class="w-full h-48 object-cover" />
+        <div class="p-6">
+          <h3 class="text-accent font-semibold text-lg mb-2">KiddoTech</h3>
+          <p class="text-white/80 text-sm">A playful, educational web project for KiddoTech, featuring interactive content for kids.</p>
+        </div>
+      </button>
+      <!-- Kryo -->
+      <button onclick="openModal('kryo')" class="group glass p-0 shadow-2xl rounded-2xl overflow-hidden hover:scale-105 transition-transform relative focus:outline-none">
+        <img src="assets/kryo/kryo (1).png" alt="Kryo" class="w-full h-48 object-cover" />
+        <div class="p-6">
+          <h3 class="text-accent font-semibold text-lg mb-2">Kryo</h3>
+          <p class="text-white/80 text-sm">A modern, tech-focused web project for Kryo, highlighting innovative solutions and design.</p>
+        </div>
+      </button>
+      <!-- Five/Surved -->
+      <button onclick="openModal('five')" class="group glass p-0 shadow-2xl rounded-2xl overflow-hidden hover:scale-105 transition-transform relative focus:outline-none">
+        <img src="assets/extra/five/surved (1).png" alt="Five/Surved" class="w-full h-48 object-cover" />
+        <div class="p-6">
+          <h3 class="text-accent font-semibold text-lg mb-2">Five / Surved</h3>
+          <p class="text-white/80 text-sm">A creative web and branding project, blending survey tools and interactive design.</p>
+        </div>
+      </button>
+    </div>
+  </section>
+
+  <!-- Experience Timeline -->
+  <section class="max-w-3xl mx-auto py-12 px-6 space-y-8 animate__animated animate__fadeInUp animate__delay-4s">
+    <h2 class="text-3xl font-bold text-center text-accent mb-10 tracking-wide drop-shadow-lg">Experiences</h2>
+    <div class="glass p-6 shadow-lg">
+      <h3 class="text-accent font-semibold text-lg mb-1">AI & Web Systems Assistant</h3>
+      <div class="text-white/70 text-sm mb-2">Client-Based – Remote | 2024–2025</div>
+      <ul class="list-disc list-inside space-y-1 text-white/90">
+        <li>Tested and evaluated AI tools for RAG systems and large-scale data querying.</li>
+        <li>Extracted influencer insights from Twitter/X and other platforms for client reporting.</li>
+        <li>Supported AI tool workflows, automation tasks, and content system logic.</li>
+        <li>Collaborated with remote teams to deliver technical solutions and troubleshoot issues.</li>
+      </ul>
+    </div>
+    <div class="glass p-6 shadow-lg">
+      <h3 class="text-accent font-semibold text-lg mb-1">Digital Marketing Intern (SEO & Web)</h3>
+      <div class="text-white/70 text-sm mb-2">Confidential Clients – Onsite | 2023</div>
+      <ul class="list-disc list-inside space-y-1 text-white/90">
+        <li>Wrote SEO-optimized articles and landing pages for Lightoflove.com and Amaron-PH.</li>
+        <li>Managed WordPress sites using Elementor and performed layout/content edits.</li>
+        <li>Created Instagram captions, tracked performance, and aligned tone with brands.</li>
+        <li>Worked with Google Analytics and conducted SEO audits for client websites.</li>
+        <li>Assisted in digital marketing campaigns and content strategy planning.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="w-full py-8 px-6 text-center text-white/80 animate__animated animate__fadeInUp animate__delay-7s">
+    <div class="space-y-1">
+      <div class="font-semibold text-lg">Jordan Molina</div>
+      <div>0961 824 3694</div>
+      <div>molinajordan0x@gmail.com</div>
+      <div>1c Sinag Street, Karuhatan, Valenzuela City</div>
+      <div class="text-accent mt-2">.Jordan © <span id="year"></span></div>
+    </div>
+  </footer>
+  <!-- Modal Overlay (moved to very end for full-page coverage and max z-index) -->
+  <div id="projectModal" class="fixed inset-0 z-[9999] flex items-center justify-center bg-transparent hidden">
+    <div class="bg-black/80 backdrop-blur-lg p-2 flex items-center justify-center w-full h-full">
+      <div class="glass max-w-2xl w-full mx-2 sm:mx-4 p-4 sm:p-8 rounded-2xl shadow-2xl relative animate__animated animate__fadeIn">
+        <button onclick="closeModal()" class="absolute top-4 right-4 text-accent text-2xl focus:outline-none" aria-label="Close modal"><i class="fa-solid fa-xmark"></i></button>
+        <div id="modalContent" class="flex flex-col items-center"></div>
+      </div>
+    </div>
+  </div>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    // Project gallery data for modal (multiple images per project)
+    const projectGallery = {
+      diecast: {
+        title: 'Diecast Diary',
+        images: [
+          'assets/logo/diecastdiary.png'
+        ],
+        desc: `A web project for diecast enthusiasts to track, display, and share their collections. Built with a focus on visual appeal and usability.`
+      },
+      slivalry: {
+        title: 'Slivalry',
+        images: [
+          'assets/logo/Slivalry.png'
+        ],
+        desc: `Distinctive branding and web design for Slivalry, blending modern aesthetics with creative flair.`
+      },
+      jordanlogo: {
+        title: 'Jordan Logo',
+        images: [
+          'assets/logo/JLogo.png'
+        ],
+        desc: `A clean, modern logo representing Jordan Molina's personal brand and portfolio.`
+      },
+      eco: {
+        title: 'EcoKitchen',
+        images: [
+          'assets/ecokitchen/ecokitchen (1).png', 'assets/ecokitchen/ecokitchen (2).png', 'assets/ecokitchen/ecokitchen (3).png'
+        ],
+        desc: `Showcasing green kitchen innovations and products, with a clean, modern web design.`
+      },
+      kiddo: {
+        title: 'KiddoTech',
+        images: [
+          'assets/kiddotech/kiddotech (1).png', 'assets/kiddotech/kiddotech (2).png', 'assets/kiddotech/kiddotech (3).png'
+        ],
+        desc: `Interactive and educational web design for children, with a focus on fun and learning.`
+      },
+      kryo: {
+        title: 'Kryo',
+        images: [
+          'assets/kryo/kryo (1).png', 'assets/kryo/kryo (2).png', 'assets/kryo/kryo (3).png'
+        ],
+        desc: `Showcasing technology and innovation with a sleek, modern web interface.`
+      },
+      five: {
+        title: 'Five / Surved',
+        images: [
+          'assets/extra/five/surved (1).png', 'assets/extra/five/surved (2).png', 'assets/extra/five/surved (3).png'
+        ],
+        desc: `Combining survey functionality with engaging visuals and branding for a unique user experience.`
+      }
+    };
+
+    let currentGallery = [];
+    let currentIndex = 0;
+
+    window.openModal = function(key) {
+      const modal = document.getElementById('projectModal');
+      const content = document.getElementById('modalContent');
+      const data = projectGallery[key];
+      if (data) {
+        currentGallery = data.images;
+        currentIndex = 0;
+        renderModalContent(data, currentIndex);
+        modal.classList.remove('hidden');
+      }
+    }
+
+    function renderModalContent(data, index) {
+      const content = document.getElementById('modalContent');
+      let galleryNav = '';
+      if (data.images.length > 1) {
+        galleryNav = `
+          <div class='flex justify-center items-center gap-4 mb-4'>
+            <button onclick='prevImage()' class='text-accent text-2xl px-2 py-1 rounded-full hover:bg-accent/10 focus:outline-none'><i class='fa-solid fa-chevron-left'></i></button>
+            <span class='text-white/70 text-sm'>${index + 1} / ${data.images.length}</span>
+            <button onclick='nextImage()' class='text-accent text-2xl px-2 py-1 rounded-full hover:bg-accent/10 focus:outline-none'><i class='fa-solid fa-chevron-right'></i></button>
+          </div>
+        `;
+      }
+      content.innerHTML = `
+        <img src='${data.images[index]}' alt='${data.title}' class='w-auto max-h-[35vh] sm:max-h-[50vh] object-contain rounded-2xl mb-8 shadow-2xl mx-auto' />
+        ${galleryNav}
+        <h3 class='text-accent text-2xl font-bold mb-2'>${data.title}</h3>
+        <p class='text-white/90 text-center'>${data.desc}</p>
+      `;
+    }
+
+    window.closeModal = function() {
+      document.getElementById('projectModal').classList.add('hidden');
+    }
+
+    function prevImage() {
+      if (currentGallery.length > 1) {
+        currentIndex = (currentIndex - 1 + currentGallery.length) % currentGallery.length;
+        const key = Object.keys(projectGallery).find(k => projectGallery[k].images === currentGallery);
+        renderModalContent(projectGallery[key], currentIndex);
+      }
+    }
+
+    function nextImage() {
+      if (currentGallery.length > 1) {
+        currentIndex = (currentIndex + 1) % currentGallery.length;
+        const key = Object.keys(projectGallery).find(k => projectGallery[k].images === currentGallery);
+        renderModalContent(projectGallery[key], currentIndex);
+      }
+    }
+
+    // Close modal on overlay click and Escape key
+    document.addEventListener('DOMContentLoaded', () => {
+      document.getElementById('projectModal').addEventListener('click', function(e) {
+        if (e.target === this) closeModal();
+      });
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') closeModal();
+      });
+    });
+  </script>
+</body>
+</html>
